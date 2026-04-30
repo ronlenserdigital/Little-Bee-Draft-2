@@ -1320,7 +1320,7 @@ a.contact-item:hover { color: var(--gold-light); }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 60px;
   position: relative;
@@ -1329,7 +1329,8 @@ a.contact-item:hover { color: var(--gold-light); }
 
 .footer-logo {
   height: auto;
-  width: 280px;
+  width: 400px;
+  max-width: 100%;
   background: transparent;
   margin-bottom: 16px;
 }
