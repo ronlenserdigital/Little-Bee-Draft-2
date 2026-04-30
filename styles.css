@@ -1328,8 +1328,8 @@ a.contact-item:hover { color: var(--gold-light); }
 }
 
 .footer-logo {
-  height: 120px;
-  width: auto;
+  height: auto;
+  width: 280px;
   background: transparent;
   margin-bottom: 16px;
 }
