@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Busy Bees: Little Bee Sensory Playhouse — Indoor play for kids ages 0–6. Opening July 1 in Lexington, SC. Book open play sessions, private parties, and memberships." />
+  <meta name="keywords" content="sensory playhouse Lexington SC, indoor play Lexington, toddler play space, sensory play kids, birthday parties Lexington SC" />
+  <meta name="author" content="Busy Bees Little Bee Sensory Playhouse" />
+  <meta property="og:title" content="Busy Bees: Little Bee Sensory Playhouse | Lexington, SC" />
+  <meta property="og:description" content="Indoor sensory play for kids ages 0–6. Opening July 1 in Lexington, SC. Book sessions, parties, and memberships." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.busybeesplayhousesc.com" />
+  <title>Busy Bees: Little Bee Sensory Playhouse | Lexington, SC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="hex-loader">
+        <div class="hex hex1"></div>
+        <div class="hex hex2"></div>
+        <div class="hex hex3"></div>
+      </div>
+      <p class="preloader-text">Little adventures await...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="images/logo.png" alt="Busy Bees Little Bee Sensory Playhouse" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sessions" class="nav-link">Sessions</a></li>
+        <li><a href="#memberships" class="nav-link">Memberships</a></li>
+        <li><a href="#parties" class="nav-link">Parties</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#booking" class="nav-cta-link">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#sessions" class="mobile-link">Sessions</a>
+      <a href="#memberships" class="mobile-link">Memberships</a>
+      <a href="#parties" class="mobile-link">Parties</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#booking" class="mobile-link mobile-cta">Book Now</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hex-bg" aria-hidden="true">
+      <div class="hex-pattern"></div>
+    </div>
+    <div class="floating-hexes" aria-hidden="true">
+      <div class="fhex fhex-1">🐝</div>
+      <div class="fhex fhex-2">🌸</div>
+      <div class="fhex fhex-3">⭐</div>
+      <div class="fhex fhex-4">🍯</div>
+      <div class="fhex fhex-5">🌼</div>
+      <div class="fhex fhex-6">🐝</div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Opening July 1, 2025 · Lexington, SC</div>
+      <h1 class="hero-title reveal">
+        <span class="hero-script">Where Little Ones</span>
+        <span class="hero-big">Buzz & Bloom</span>
+      </h1>
+      <p class="hero-sub reveal">An indoor play space for kids ages 0–6 in Lexington, SC. Big enough to explore. Small enough to feel safe. Opening July 1.</p>
+      <div class="hero-actions reveal">
+        <a href="#booking" class="btn-primary">Book a Session</a>
+        <a href="#sessions" class="btn-ghost">See Pricing</a>
+      </div>
+      <div class="hero-trust reveal">
+        <span>🧠 Sensory Safe</span>
+        <span>🎉 Private Parties</span>
+        <span>💛 Memberships Available</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-bee">🐝</div>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown-strip">
+    <div class="countdown-content">
+      <p class="countdown-label">🍯 Grand Opening Countdown</p>
+      <div class="countdown-timer" id="countdownTimer">
+        <div class="count-unit"><span class="count-num" id="days">00</span><span class="count-word">Days</span></div>
+        <div class="count-sep">·</div>
+        <div class="count-unit"><span class="count-num" id="hours">00</span><span class="count-word">Hours</span></div>
+        <div class="count-sep">·</div>
+        <div class="count-unit"><span class="count-num" id="minutes">00</span><span class="count-word">Minutes</span></div>
+        <div class="count-sep">·</div>
+        <div class="count-unit"><span class="count-num" id="seconds">00</span><span class="count-word">Seconds</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Are -->
+  <section class="about-intro" id="about">
+    <div class="container">
+      <div class="section-tag reveal">The Space</div>
+      <h2 class="section-title reveal">More Than Play.<br /><em>This Is Where Kids Actually Grow.</em></h2>
+      <p class="section-sub reveal">Little Bee is an indoor play space for kids ages 0–6 in Lexington, SC. We keep sessions small on purpose — so your child gets to actually play, not wait in line or compete for space.</p>
+
+      <div class="pillars-grid">
+        <div class="pillar reveal">
+          <div class="pillar-icon">🧠</div>
+          <h3>Built Around the Senses</h3>
+          <p>Touch, sound, movement, light — every corner of this space has something to discover. We built it around how kids actually experience the world, not how adults think they should.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-icon">🛡️</div>
+          <h3>Safe by Design</h3>
+          <p>We cap every session so it never gets chaotic. Grip socks required, waivers on file, staff always on the floor. You can actually relax while they play.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-icon">🌈</div>
+          <h3>Inclusive & Welcoming</h3>
+          <p>Kids with sensory sensitivities belong here. We keep sessions calm and low-key on purpose — so every child can show up, feel comfortable, and just play.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-icon">☕</div>
+          <h3>The Buzz Café</h3>
+          <p>While the kids do their thing, grab a snack or a drink at The Buzz. You've earned a minute to sit down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessions -->
+  <section class="sessions" id="sessions">
+    <div class="hex-bg-section" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-tag reveal">Open Play</div>
+      <h2 class="section-title reveal">Session Times & Pricing</h2>
+      <p class="section-sub reveal">Sessions run Monday through Saturday and must be booked ahead — we cap spots to keep the space calm. If you're late, your session still ends on time.</p>
+
+      <div class="sessions-grid">
+        <!-- 90 Min Sessions -->
+        <div class="session-card reveal">
+          <div class="session-card-header">
+            <span class="session-badge">90 Minutes</span>
+            <h3>Full Play Sessions</h3>
+            <p class="session-days">Monday – Saturday</p>
+          </div>
+          <div class="session-times">
+            <div class="time-slot"><span class="bee-dot">🐝</span> 9:00 – 10:30 AM</div>
+            <div class="time-slot"><span class="bee-dot">🐝</span> 11:00 AM – 12:30 PM</div>
+            <div class="time-slot"><span class="bee-dot">🐝</span> 1:00 – 2:30 PM</div>
+            <div class="time-slot"><span class="bee-dot">🐝</span> 3:00 – 4:30 PM</div>
+          </div>
+          <div class="session-pricing">
+            <div class="price-row"><span>Per Child</span><span class="price">$16</span></div>
+            <div class="price-row"><span>Sibling Rate</span><span class="price">$12</span></div>
+            <div class="price-row"><span>Infant (under 12 mo, w/ sibling)</span><span class="price">Free</span></div>
+            <div class="price-row"><span>Infant (without sibling)</span><span class="price">$8</span></div>
+            <div class="price-row muted"><span>Additional Adults</span><span class="price">$3</span></div>
+          </div>
+          <a href="#booking" class="btn-primary btn-card">Book This Session</a>
+        </div>
+
+        <!-- Express -->
+        <div class="session-card session-card-express reveal">
+          <div class="session-card-header">
+            <span class="session-badge badge-express">Express · 1 Hour</span>
+            <h3>Busy Bee Express</h3>
+            <p class="session-days">Monday – Saturday</p>
+          </div>
+          <div class="session-times">
+            <div class="time-slot"><span class="bee-dot">⚡</span> 5:00 – 6:00 PM</div>
+          </div>
+          <div class="session-pricing">
+            <div class="price-row"><span>Per Child</span><span class="price">$12</span></div>
+            <div class="price-row"><span>Sibling Rate</span><span class="price">$10</span></div>
+          </div>
+          <div class="express-note">Perfect for an after-school burst of fun. Get in, play hard, buzz home.</div>
+          <a href="#booking" class="btn-primary btn-card">Book Express</a>
+        </div>
+      </div>
+
+      <!-- Hours Banner -->
+      <div class="hours-banner reveal">
+        <div class="hours-item">
+          <span class="hours-label">Mon – Sat</span>
+          <span class="hours-val">9:00 AM – 6:00 PM</span>
+        </div>
+        <div class="hours-divider"></div>
+        <div class="hours-item">
+          <span class="hours-label">Sunday</span>
+          <span class="hours-val">Private Parties Only</span>
+        </div>
+        <div class="hours-divider"></div>
+        <div class="hours-item">
+          <span class="hours-label">Socks</span>
+          <span class="hours-val">Required · Grip Socks $3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memberships -->
+  <section class="memberships" id="memberships">
+    <div class="container">
+      <div class="section-tag reveal">Save More, Play More</div>
+      <h2 class="section-title reveal">Membership Plans</h2>
+      <p class="section-sub reveal">If your family is coming more than once a month, membership just makes sense. Book less, spend less, and skip the math every visit.</p>
+
+      <div class="membership-grid">
+        <div class="membership-card reveal">
+          <div class="mem-tier">Little Bee</div>
+          <div class="mem-price"><span class="mem-dollar">$</span>49<span class="mem-per">/mo</span></div>
+          <div class="mem-tagline">Great starting point</div>
+          <ul class="mem-features">
+            <li><span class="check">✦</span> 4 sessions per month</li>
+            <li><span class="check">✦</span> 1 adult included per session</li>
+            <li><span class="check">✦</span> Book in advance online</li>
+            <li><span class="check">✦</span> Café access</li>
+          </ul>
+          <a href="#booking" class="btn-mem">Start Membership</a>
+        </div>
+
+        <div class="membership-card mem-featured reveal">
+          <div class="mem-popular-badge">Most Popular 🌟</div>
+          <div class="mem-tier">Busy Bee</div>
+          <div class="mem-price"><span class="mem-dollar">$</span>69<span class="mem-per">/mo</span></div>
+          <div class="mem-tagline">Most sessions, best value</div>
+          <ul class="mem-features">
+            <li><span class="check">✦</span> 8 sessions per month</li>
+            <li><span class="check">✦</span> 1 adult included per session</li>
+            <li><span class="check">✦</span> Priority booking</li>
+            <li><span class="check">✦</span> Café access</li>
+          </ul>
+          <a href="#booking" class="btn-mem btn-mem-featured">Start Membership</a>
+        </div>
+
+        <div class="membership-card reveal">
+          <div class="mem-tier">Queen Bee</div>
+          <div class="mem-price"><span class="mem-dollar">$</span>89<span class="mem-per">/mo</span></div>
+          <div class="mem-tagline">Unlimited weekday access</div>
+          <ul class="mem-features">
+            <li><span class="check">✦</span> Unlimited weekday sessions</li>
+            <li><span class="check">✦</span> 1 adult included per session</li>
+            <li><span class="check">✦</span> Priority booking + early access</li>
+            <li><span class="check">✦</span> Café access</li>
+          </ul>
+          <a href="#booking" class="btn-mem">Start Membership</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parties -->
+  <section class="parties" id="parties">
+    <div class="hex-bg-section" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-tag reveal">Celebrate Here</div>
+      <h2 class="section-title reveal">Private Party Packages</h2>
+      <p class="section-sub reveal">You get the whole building. No other families, no strangers walking through — just your people and two hours to celebrate however you want. Sundays are held exclusively for parties.</p>
+
+      <div class="party-grid">
+        <div class="party-card reveal">
+          <div class="party-icon">🐝</div>
+          <div class="party-name">Busy Bee Party</div>
+          <div class="party-price">$400</div>
+          <div class="party-details">
+            <div class="party-detail-row"><span>Children</span><span>Up to 10</span></div>
+            <div class="party-detail-row"><span>Total Guests</span><span>Up to 20</span></div>
+            <div class="party-detail-row"><span>Duration</span><span>2 Hours Private</span></div>
+            <div class="party-detail-row"><span>Day</span><span>Sundays + Availability</span></div>
+          </div>
+          <a href="#contact" class="btn-party">Inquire Now</a>
+        </div>
+
+        <div class="party-card party-featured reveal">
+          <div class="party-crown">👑</div>
+          <div class="party-icon">🐝🐝</div>
+          <div class="party-name">Queen Bee Party</div>
+          <div class="party-price">$475</div>
+          <div class="party-details">
+            <div class="party-detail-row"><span>Children</span><span>Up to 15</span></div>
+            <div class="party-detail-row"><span>Total Guests</span><span>Up to 25</span></div>
+            <div class="party-detail-row"><span>Duration</span><span>2 Hours Private</span></div>
+            <div class="party-detail-row"><span>Day</span><span>Sundays + Availability</span></div>
+          </div>
+          <a href="#contact" class="btn-party btn-party-featured">Inquire Now</a>
+        </div>
+      </div>
+
+      <div class="party-addons reveal">
+        <h4>Party Add-Ons</h4>
+        <div class="addon-row">
+          <span>Extra Child (beyond package limit)</span>
+          <span class="addon-price">$15 each</span>
+        </div>
+        <div class="addon-row">
+          <span>Additional Hour of Private Rental</span>
+          <span class="addon-price">$100 / hr</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies -->
+  <section class="policies">
+    <div class="container">
+      <div class="section-tag reveal">Good to Know</div>
+      <h2 class="section-title reveal">Before You Visit</h2>
+      <div class="policy-grid">
+        <div class="policy-item reveal">
+          <div class="policy-icon">📋</div>
+          <h4>Waiver Required</h4>
+          <p>Everyone needs a signed waiver before entering the play area. Fill it out online before you come so you're not doing paperwork at the door.</p>
+        </div>
+        <div class="policy-item reveal">
+          <div class="policy-icon">🧦</div>
+          <h4>Socks Required</h4>
+          <p>Grip socks are required for all children. Forget yours? We sell them at the front for $3.</p>
+        </div>
+        <div class="policy-item reveal">
+          <div class="policy-icon">📅</div>
+          <h4>Book Ahead</h4>
+          <p>Sessions must be booked online. We don't hold spots for walk-ins, and we cap capacity on purpose to keep it from getting loud and crowded.</p>
+        </div>
+        <div class="policy-item reveal">
+          <div class="policy-icon">⏰</div>
+          <h4>Arrive on Time</h4>
+          <p>Your session ends at the same time regardless of when you walk in. Give yourself a few extra minutes when you arrive.</p>
+        </div>
+        <div class="policy-item reveal">
+          <div class="policy-icon">🍽️</div>
+          <h4>No Outside Food</h4>
+          <p>No outside food or drinks during open play. Snacks and drinks are available at The Buzz Café inside.</p>
+        </div>
+        <div class="policy-item reveal">
+          <div class="policy-icon">👨‍👩‍👧</div>
+          <h4>Adults Stay With Kids</h4>
+          <p>One adult per child is included. Extra adults are $3 each. All adults are expected to stay and watch their children — this is not a drop-off facility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section class="booking-cta" id="booking">
+    <div class="cta-hex-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="cta-bee-top">🐝</div>
+        <h2 class="cta-title">Ready to Book?</h2>
+        <p class="cta-sub">Spots fill up fast, especially on weekends. Book now and give your little one something to look forward to.</p>
+        <div class="cta-actions">
+          <a href="https://www.busybeesplayhousesc.com/book" class="btn-primary btn-large">Book Open Play</a>
+          <a href="https://www.busybeesplayhousesc.com/memberships" class="btn-ghost btn-large">Join as Member</a>
+        </div>
+        <p class="cta-note">Opening July 1, 2025 · 5483-B Sunset Blvd, Lexington, SC 29072</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="contact-title">Questions? Party Inquiries?</h2>
+          <p>Got questions about sessions, parties, or memberships? Reach out and we'll get back to you fast.</p>
+          <div class="contact-details">
+            <a href="tel:8035292506" class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span>(803) 529-2506</span>
+            </a>
+            <a href="mailto:Ikeiyab@gmail.com" class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <span>Ikeiyab@gmail.com</span>
+            </a>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>5483-B Sunset Blvd<br />Lexington, SC 29072</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <span>Mon–Sat: 9 AM – 6 PM<br />Sunday: Private Parties Only</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+            <input type="hidden" name="subject" value="New Inquiry – Busy Bees Little Bee Sensory Playhouse" />
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Parent or guardian name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="inquiry">What Are You Interested In?</label>
+              <select id="inquiry" name="inquiry">
+                <option value="">Select an option...</option>
+                <option value="open-play">Open Play Session</option>
+                <option value="membership">Membership</option>
+                <option value="busy-bee-party">Busy Bee Party ($400)</option>
+                <option value="queen-bee-party">Queen Bee Party ($475)</option>
+                <option value="general">General Question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your little one, your event date, or any questions..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-submit" id="submitBtn">Send Message 🐝</button>
+            <div class="form-success" id="formSuccess">
+              <span>✅ Message received! We'll be in touch soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-hex-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Busy Bees Little Bee Sensory Playhouse" class="footer-logo" />
+          <p>Indoor sensory play for kids ages 0–6. Opening July 1 in Lexington, SC.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#sessions">Sessions & Pricing</a>
+          <a href="#memberships">Memberships</a>
+          <a href="#parties">Private Parties</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-hours">
+          <h4>Hours</h4>
+          <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+          <p>Sunday: Private Parties Only</p>
+          <br />
+          <h4>Location</h4>
+          <p>5483-B Sunset Blvd<br />Lexington, SC 29072</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a href="tel:8035292506">(803) 529-2506</a>
+          <a href="mailto:Ikeiyab@gmail.com">Ikeiyab@gmail.com</a>
+          <a href="https://www.busybeesplayhousesc.com">busybeesplayhousesc.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Busy Bees: Little Bee Sensory Playhouse. All rights reserved.</p>
+        <p class="footer-credit">Website by <a href="https://www.ronlenserdigital.com" target="_blank">Ron Lenser Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
