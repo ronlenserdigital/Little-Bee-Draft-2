@@ -178,7 +178,7 @@ body:hover .cursor { opacity: 1; }
   align-items: center;
 }
 .logo-img {
-  height: 52px;
+  height: 82px;
   width: auto;
   background: transparent;
 }
@@ -1326,7 +1326,7 @@ a.contact-item:hover { color: var(--gold-light); }
 }
 
 .footer-logo {
-  height: 56px;
+  height: 72px;
   width: auto;
   background: transparent;
   margin-bottom: 16px;
