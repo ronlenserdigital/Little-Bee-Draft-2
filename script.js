@@ -17,6 +17,54 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initSmoothScroll();
   initFAQ();
+  initExtraForms();
+}
+
+// ─── Event & Newsletter Forms ────────────────
+function initExtraForms() {
+  const forms = [
+    { id: 'eventForm', btn: 'eventSubmitBtn', success: 'eventFormSuccess', label: 'Reserve Spot 🐝' },
+    { id: 'newsletterForm', btn: 'newsletterBtn', success: 'newsletterSuccess', label: 'Subscribe 🍯' },
+  ];
+
+  forms.forEach(cfg => {
+    const form = document.getElementById(cfg.id);
+    const btn = document.getElementById(cfg.btn);
+    const success = document.getElementById(cfg.success);
+    if (!form) return;
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const original = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (json.success) {
+          form.reset();
+          btn.textContent = 'Done! ✅';
+          if (success) success.classList.add('visible');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.disabled = false;
+            if (success) success.classList.remove('visible');
+          }, 5000);
+        } else { throw new Error(); }
+      } catch (err) {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+        alert('Something went wrong. Please email us at info@busybeesplayhousesc.com');
+      }
+    });
+  });
 });
 
 // ─── Preloader ───────────────────────────────
