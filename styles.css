@@ -351,6 +351,16 @@ body:hover .cursor { opacity: 1; }
   opacity: 1;
   transform: translateY(0);
 }
+/* Hero content always visible - never depends on JS */
+.hero-content .reveal {
+  opacity: 1;
+  transform: none;
+}
+/* Failsafe: if JS hasn't run after 3s, force-show everything */
+@keyframes forceReveal { to { opacity: 1; transform: none; } }
+.reveal {
+  animation: forceReveal 0.01s ease 3s forwards;
+}
 
 /* --- Container --- */
 .container {
