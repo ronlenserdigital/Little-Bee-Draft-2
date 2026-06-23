@@ -2179,10 +2179,3 @@ a.contact-item:hover { color: var(--gold-light); }
   .btn-event { cursor: pointer; }
 }
 
-/* Preloader CSS safety net — auto-hides even if JS fails */
-.preloader {
-  animation: autoHidePreloader 0s ease 3.5s forwards;
-}
-@keyframes autoHidePreloader {
-  to { opacity: 0; visibility: hidden; }
-}
