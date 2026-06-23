@@ -247,10 +247,27 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.08, rootMargin: '0px 0px 0px 0px' }
   );
 
   reveals.forEach(el => observer.observe(el));
+
+  // Safety net: reveal anything already in the viewport on load
+  const revealVisible = () => {
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
+  };
+  revealVisible();
+  setTimeout(revealVisible, 200);
+
+  // Final fallback: if anything is still hidden after 2s, show all
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('visible'));
+  }, 2000);
 }
 
 // ─── Contact Form ─────────────────────────────
