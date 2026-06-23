@@ -8,7 +8,7 @@ const WEB3FORMS_KEY = '5eaa66de-2d99-47be-ab8f-6e7a51d23583'; // Replace with ac
 
 // ─── DOM Ready ───────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
+  document.body.style.overflow = 'visible';
   initCursor();
   initNav();
   initMobileMenu();
