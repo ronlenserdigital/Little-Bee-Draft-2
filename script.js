@@ -72,17 +72,19 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      preloader.classList.add('hidden');
-      document.body.style.overflow = 'visible';
-    }, 900);
-  });
+  const hide = () => {
+    preloader.classList.add('hidden');
+    document.body.style.overflow = 'visible';
+  };
 
-  // Fallback
-  setTimeout(() => {
-    if (preloader) preloader.classList.add('hidden');
-  }, 3000);
+  // Hide shortly after DOM is ready, regardless of other resources
+  setTimeout(hide, 800);
+
+  // Also hide on full load in case it fires first
+  window.addEventListener('load', () => setTimeout(hide, 400));
+
+  // Hard fallback
+  setTimeout(hide, 2500);
 }
 
 // ─── Custom Cursor ───────────────────────────
